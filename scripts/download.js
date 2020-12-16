@@ -6,7 +6,8 @@
  * LICENSE-examples file in the root directory of this source tree.
  */
 
-import { URL } from 'url';
+// import { URL } from 'url';
+const { Url } = require('url');
 import { Agent } from 'https';
 import { existsSync, writeFileSync } from 'fs';
 import fetch from 'isomorphic-fetch';
@@ -25,8 +26,6 @@ function replaceHttp(url) {
 }
 
 function normalizeUrl(url) {
-  var URL
-  URL = URL || require('url').URL
   return replaceHttp(new URL(url).toString());
 }
 

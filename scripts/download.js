@@ -25,6 +25,7 @@ function replaceHttp(url) {
 }
 
 function normalizeUrl(url) {
+  console.log(url);
   return replaceHttp(new URL(url).toString());
 }
 
